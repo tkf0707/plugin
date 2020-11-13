@@ -1,0 +1,46 @@
+<idea-plugin>
+<!--  插件id 要保持唯一-->
+  <id>com.tangkf1.firstplugin.id</id>
+<!--  插件名称-->
+  <name>FirstPlugin</name>
+  <version>1.0</version>
+<!--  作者和提供方信息-->
+  <vendor email="654043262@qq.com" url="http://www.tangkf1.com">tangkf1</vendor>
+
+<!--  插件功能描述-->
+  <description><![CDATA[
+     my first plugin<br>
+      <em>most HTML t1ags may be used</em>
+    ]]></description>
+<!--变更日志-->
+  <change-notes><![CDATA[
+      No changes.<br>
+      <em>most HTML ta1gs may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.vcs</depends>
+  <depends>Git4Idea</depends>
+  <depends>hg4idea</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+<!--  菜单动作-->
+  <actions>
+    <!-- Add your actions here -->
+    <action id="FirstPluginActionID" class="com.tangkf1.firstplugin.FirstPluginAction" text="test"
+            description="description">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl I"/>
+    </action>
+  </actions>
+
+</idea-plugin>
